@@ -5,7 +5,7 @@ y persistencia de datos en MongoDB.
 
 ---
 
-## 📁 Estructura del proyecto
+## Estructura del proyecto
 
 ```
 vetcare_pro/
@@ -36,7 +36,7 @@ vetcare_pro/
 
 ---
 
-## 🚀 Instalación y ejecución
+## Instalación y ejecución
 
 ### 1. Instalar dependencias
 
@@ -62,12 +62,12 @@ python app.py
 
 ---
 
-## 🎯 Conceptos de POO implementados
+## Conceptos de POO
 
-### ✅ Clases y Objetos
+### Clases y Objetos
 Todas las entidades del sistema son clases: `Persona`, `Animal`, `Cita`, `HistorialMedico`, etc.
 
-### ✅ Herencia
+### Herencia
 ```
 Persona (abstracta)
 ├── Cliente
@@ -81,19 +81,19 @@ Animal (abstracta)
 └── Reptil
 ```
 
-### ✅ Polimorfismo
+### Polimorfismo
 `describir()` y `calcular_riesgo()` son implementados diferente en cada subclase de Animal:
 - `Perro.calcular_riesgo()` → basado en edad y peso
 - `Gato.calcular_riesgo()` → basado en si es indoor/outdoor
 - `Ave.calcular_riesgo()` → basado en peso crítico
 - `Reptil.calcular_riesgo()` → basado en si es venenoso
 
-### ✅ Encapsulamiento
+### Encapsulamiento
 - Atributos privados con `_` (convención) y `__` (name mangling Python)
 - `HistorialMedico` usa `__diagnostico`, `__tratamiento` con getters controlados
 - `Cliente`, `Veterinario` exponen sus datos solo mediante properties
 
-### ✅ Modularidad
+### Modularidad
 Cada responsabilidad está en su propio módulo:
 - `models/` → solo entidades de negocio
 - `database/` → solo persistencia
@@ -103,7 +103,7 @@ Cada responsabilidad está en su propio módulo:
 
 ---
 
-## 🏗️ Patrones de Diseño
+## Patrones de Diseño
 
 ### 1. SINGLETON — `database/db_connection.py`
 ```python
@@ -124,7 +124,7 @@ gestor_citas_global.registrar_cita(datos)
 
 ---
 
-## 🖥️ Interfaces gráficas (CustomTkinter)
+## Interfaces gráficas (CustomTkinter)
 
 | # | Pantalla        | Descripción |
 |---|-----------------|-------------|
@@ -136,7 +136,7 @@ gestor_citas_global.registrar_cita(datos)
 
 ---
 
-## 🔧 Variables de entorno
+## Variables de entorno
 
 ```bash
 MONGO_URI=mongodb://localhost:27017/    # URL de MongoDB (por defecto)
@@ -144,7 +144,7 @@ MONGO_URI=mongodb://localhost:27017/    # URL de MongoDB (por defecto)
 
 ---
 
-## 📝 Notas de diseño
+## Notas de diseño
 
 - **Modo demo**: si MongoDB no está disponible al iniciar, los datos se almacenan en memoria RAM durante la sesión. Al cerrar la app se pierden (perfecto para demo/presentación).
 - **Tema visual**: modo oscuro con paleta de colores médico-verde. Totalmente personalizable en `app.py` (diccionario `COLORS`).
