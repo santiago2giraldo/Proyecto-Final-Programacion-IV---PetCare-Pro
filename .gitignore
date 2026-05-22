@@ -1,5 +1,5 @@
+__pycache__/
+*.py[cod]
+*.pyo
 .env
 data/
-__pycache__/
-*.pyc
-*.pyo
